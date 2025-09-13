@@ -1,2 +1,2 @@
 # alu-scripting
-HELLO
+Hello

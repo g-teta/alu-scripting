@@ -1,7 +1,25 @@
 #!/usr/bin/python3
 """
-Recursive function that queries the Reddit API, parses the titles of
-all hot articles, and prints a sorted count of given keywords.
+This module provides a recursive function to count occurrences of
+given keywords in all hot posts of a subreddit and prints the results
+sorted by frequency and alphabetically.
+
+Function:
+    count_words(subreddit, word_list)
+
+Usage:
+    >>> from 3-count import count_words
+    >>> count_words('python', ['python', 'java', 'javascript'])
+    java: 27
+    javascript: 20
+    python: 17
+
+Notes:
+- Counts are case-insensitive.
+- Words are counted individually; duplicates in the word_list are summed.
+- Words not found are skipped.
+- Invalid subreddits or no matches produce no output.
+- No loops; recursion handles pagination.
 """
 import requests
 import re

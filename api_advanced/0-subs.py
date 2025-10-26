@@ -1,7 +1,23 @@
 #!/usr/bin/python3
 """
-Queries the Reddit API and returns the number of subscribers
-for a given subreddit.
+0-subs module
+
+This module provides a function to query the Reddit API and return
+the number of subscribers for a given subreddit.
+
+Function:
+    number_of_subscribers(subreddit)
+
+Usage:
+    >>> from 0-subs import number_of_subscribers
+    >>> number_of_subscribers('python')
+    1001234
+
+Notes:
+- The function returns 0 if the subreddit is invalid or does not exist.
+- No authentication is required to access this endpoint.
+- The Reddit API requires a custom User-Agent header to avoid request rejection.
+- Invalid subreddits may redirect to a search results page; this function disables redirects.
 """
 import requests
 
